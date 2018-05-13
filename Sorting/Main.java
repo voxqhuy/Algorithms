@@ -15,6 +15,7 @@ public class Main {   // Save as "Hello.java" under "d:\myProject"
 
    		/* Basic sortings */
     	BasicSorting bs = new BasicSorting();
+
     	// INSERTION SORT
       	long startTime = System.nanoTime();
       	sortedArray = bs.insertionSort(arr.clone());
@@ -22,9 +23,8 @@ public class Main {   // Save as "Hello.java" under "d:\myProject"
       	System.out.println(endTime - startTime);
       	System.out.println(Arrays.toString(sortedArray));
 
-      	startTime = System.nanoTime();
-      	sortedArray = bs.insertionSort2(arr.clone());
-      	endTime = System.nanoTime();
-      	System.out.println(endTime - startTime);
+      	// BUBLE SORT
+      	
+
    }
 }
