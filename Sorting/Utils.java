@@ -1,6 +1,16 @@
 import java.util.Random;
+import java.util.Arrays;
+import java.util.function.UnaryOperator;
 
 public class Utils {
+	
+	// The first type parameter of MonoFunction is the object type that contains the method to execute.
+	// The second type parameter of MonoFunction is the type of the only parameter.
+	// The third type parameter of TriFunction is the return type of the method.
+	// interface MonoFunction<U, R> {
+	//   R apply(U u);
+	// }
+
 	public static int[] makeNumbers(int min, int range, int length) {
 		// Generating random numbers
 		Random ran = new Random();
@@ -14,4 +24,12 @@ public class Utils {
 		}
 		return arr;
 	}
+
+	// public void timing(int[] arr, UnaryOperator<int[]> func) {
+	// 	long startTime = System.nanoTime();
+ //      	// sortedArray = bs.insertionSort(arr.clone());
+ //      	System.out.println(Arrays.toString(func.apply(arr)));
+ //      	long endTime = System.nanoTime();
+ //      	System.out.println(endTime - startTime);
+	// }
 }
