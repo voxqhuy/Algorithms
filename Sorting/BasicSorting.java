@@ -1,7 +1,7 @@
 public class BasicSorting extends Sorting{
 
 	/* INSERTION SORT */
-	public int[] insertionSort(int[] arr) {
+	public static int[] insertionSort(int[] arr) {
 		// the array's length
 		int len = arr.length;
 		// start at the second element
@@ -54,12 +54,12 @@ public class BasicSorting extends Sorting{
 	/* BUBBLE SORT */
 	public static int[] bubleSort(int[] arr) {
 		// Keep track of the array's order status
-		bool isUnsorted = true;
+		boolean isUnsorted = true;
 		while (isUnsorted) {
 			// set it to false initially
 			isUnsorted = false;
 			// go through each pair of elements
-			for (int i = 0; i < arr.len - 1; i++) {
+			for (int i = 0; i < arr.length - 1; i++) {
 				// If the element on the left is greater, swap them
 				if (arr[i] > arr[i + 1]) {
 					// Make a copy of one element
@@ -72,5 +72,6 @@ public class BasicSorting extends Sorting{
 				}
 			}
 		}
+		return arr;
 	}
 }

@@ -1,6 +1,7 @@
 import java.util.Random;
 import java.util.Arrays;
-import java.util.function.UnaryOperator;
+import java.text.NumberFormat;
+import java.util.Locale;
 
 public class Utils {
 	
@@ -23,6 +24,20 @@ public class Utils {
 			arr[i] = n;
 		}
 		return arr;
+	}
+
+	// format number
+	// TODO: improve for decimal numbers
+	public static String formatNumber(long num) {
+		NumberFormat nf = NumberFormat.getNumberInstance(Locale.US);
+      	String numStr = nf.format(num);
+      	return numStr;
+	}
+
+	// print timing result
+	public static void printTiming(String sortingName, long time) {
+		String formattedTime = formatNumber(time / 1000000);
+		System.out.println(sortingName + ": " + formattedTime + "ms");
 	}
 
 	// public void timing(int[] arr, UnaryOperator<int[]> func) {
