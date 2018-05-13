@@ -1,3 +1,3 @@
 // Just a super class
-public class Sorting {
+public class Sort {
 }

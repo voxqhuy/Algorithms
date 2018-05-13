@@ -22,24 +22,26 @@ public class Main {   // Save as "Hello.java" under "d:\myProject"
    		// System.out.println("The sorted array:");
    		// System.out.println(Arrays.toString(BasicSorting.insertionSort(arr.clone())));
    		System.out.println("Testing sorting algorithms with "
-   							+ arrayLength + " random numbers");
+   							+ arrayLength + " random numbers.");
    		System.out.println("The length of time each algorithm takes:");
    		
 
    		/*** START SORTING ***/
 
-   		/* Basic sortings */
-    	BasicSorting bs = new BasicSorting();
+   		/* Simple Sorts */
+    	SimpleSort ss = new SimpleSort();
 
     	// INSERTION SORT
       	long startTime = System.nanoTime();
-      	sortedArray = bs.insertionSort(arr.clone());
+      	sortedArray = ss.insertionSort(arr.clone());
       	long endTime = System.nanoTime();
       	long length = endTime - startTime;
       	// The result
       	utils.printTiming("Insertion Sort", length);
 
-      	// BUBLE SORT
+      	/* Bubble sort and variants */
+      	BubbleSort bs = new BubbleSort();
+      	// BUBBLE SORT
       	startTime = System.nanoTime();
       	sortedArray = bs.bubleSort(arr.clone());
       	endTime = System.nanoTime();
